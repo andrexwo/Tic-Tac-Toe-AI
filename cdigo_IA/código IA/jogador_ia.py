@@ -65,8 +65,7 @@ class JogadorIA(Jogador):
         
 
        
-            #requisito 2
-        
+            #requisito 2       
         for l in range(0,3):
             somal = 0
             for c in range(0,3):
@@ -85,8 +84,6 @@ class JogadorIA(Jogador):
                     if linha != None and self.matriz[linha][coluna] == Tabuleiro.DESCONHECIDO:
                         print(linha, coluna)
                         return (linha, coluna)
-                            
-
         #fim do requisito 2                        
 
         #requisito 3
