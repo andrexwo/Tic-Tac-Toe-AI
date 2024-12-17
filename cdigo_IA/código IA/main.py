@@ -6,4 +6,3 @@ jogo = JogoVelha()
 jogo.start()
 
 jogo.wait_quit_event()
-

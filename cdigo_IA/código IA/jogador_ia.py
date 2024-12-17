@@ -21,7 +21,6 @@ class JogadorIA(Jogador):
                         if self.matriz[l][x] == Tabuleiro.DESCONHECIDO:
                             return (l, x)
                 
-   
         for c in range (0,3):
             somac = 0
             for l in range (0,3):
@@ -30,13 +29,14 @@ class JogadorIA(Jogador):
                     for x in range (0,3):
                         if self.matriz[x][c] == Tabuleiro.DESCONHECIDO:
                             return (x, c)
-        
+                        
         somad = 0
         for i in range (0,3):
             somad += self.matriz[i][i]
             if somad == 2:
                     if self.matriz[i][i] == Tabuleiro.DESCONHECIDO:
                         return (i, i)
+                    
         somad = 0
         for i in range (0,3):
             somad += self.matriz[i][2-i]
@@ -53,7 +53,6 @@ class JogadorIA(Jogador):
                         if self.matriz[l][x] == Tabuleiro.DESCONHECIDO:
                             return (l, x)
                 
-   
         for c in range (0,3):
             somac = 0
             for l in range (0,3):
@@ -62,9 +61,7 @@ class JogadorIA(Jogador):
                     for x in range (0,3):
                         if self.matriz[x][c] == Tabuleiro.DESCONHECIDO:
                             return (x, c)
-        
-
-       
+              
             #requisito 2       
         for l in range(0,3):
             somal = 0
@@ -106,7 +103,6 @@ class JogadorIA(Jogador):
 
         #fim do requisito 4
 
-
         #requisito 5
         cantos = [(0,0), (0,2), (2,0), (2,2)]
 
@@ -121,7 +117,6 @@ class JogadorIA(Jogador):
             for c in range(0,3):
                 if self.matriz[l][c] == Tabuleiro.DESCONHECIDO:
                     lista.append((l, c))
-
 
         if(len(lista) > 0):
             p = randint(0, len(lista)-1)
